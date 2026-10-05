@@ -1,23 +1,25 @@
-# Gerador de Gabaritos de Chicotes - GitHub Pages
+# Gerador de Gabaritos de Chicotes V2
 
-Aplicação estática que funciona somente com HTML, CSS e JavaScript.
+## Novidades
 
-## Publicação
+- Analisa PDFs com texto pesquisável usando PDF.js.
+- Localiza identificações de conectores.
+- Procura dimensões numéricas próximas.
+- Calcula confiança da associação.
+- Sugere posição horizontal e direção.
+- Permite revisar resultados antes de adicioná-los ao gabarito.
 
-1. Crie um repositório no GitHub.
-2. Envie `index.html` para a raiz.
-3. Abra Settings > Pages.
-4. Em Source, use Deploy from a branch.
-5. Selecione `main` e `/ (root)`.
-6. Salve e aguarde a publicação.
+## Publicação no GitHub Pages
 
-## Segurança
+1. Substitua o `index.html` do repositório pelo arquivo desta versão.
+2. Confirme o commit.
+3. Aguarde a publicação do GitHub Pages.
+4. Atualize a página com Ctrl+F5.
 
-Não coloque PDFs, backups JSON ou desenhos internos no repositório. O PDF selecionado na tela fica somente no navegador. Os projetos salvos no navegador usam localStorage. Use Exportar backup JSON regularmente e armazene o arquivo em local corporativo autorizado.
+## Limitações
 
-## Limitações da POC
-
-- Não há login ou banco compartilhado.
-- Não há OCR/IA.
-- O SVG precisa de validação técnica antes de fabricação.
-- A limpeza dos dados do navegador pode apagar projetos locais.
+- PDFs digitalizados como imagem ainda não são lidos.
+- A associação dimensão-conector é uma heurística por proximidade.
+- Linhas e ramificações ainda não são reconhecidas.
+- A biblioteca PDF.js é carregada pelo cdnjs. Se o domínio for bloqueado, a análise não funcionará.
+- Todo resultado deve passar por conferência técnica antes de fabricação.
