@@ -1,25 +1,15 @@
-# Gerador de Gabaritos de Chicotes V2
+# Gerador de Gabaritos de Chicotes V3
 
 ## Novidades
+- Corpo principal com início, final e posição vertical configuráveis e arrastáveis.
+- Segmentos pai e filho para ramificações em outras ramificações.
+- Âncora no início, fim ou distância intermediária do segmento pai.
+- Acomodação automática com dobra de 90 graus para saídas grandes.
+- Regra automática: identificações iniciadas por `US` ou `-US` recebem 100 mm.
+- Migração automática dos projetos salvos nas versões anteriores.
 
-- Analisa PDFs com texto pesquisável usando PDF.js.
-- Localiza identificações de conectores.
-- Procura dimensões numéricas próximas.
-- Calcula confiança da associação.
-- Sugere posição horizontal e direção.
-- Permite revisar resultados antes de adicioná-los ao gabarito.
+## Atualização no GitHub Pages
+Substitua o `index.html` no repositório, confirme o commit e atualize a página com Ctrl+F5.
 
-## Publicação no GitHub Pages
-
-1. Substitua o `index.html` do repositório pelo arquivo desta versão.
-2. Confirme o commit.
-3. Aguarde a publicação do GitHub Pages.
-4. Atualize a página com Ctrl+F5.
-
-## Limitações
-
-- PDFs digitalizados como imagem ainda não são lidos.
-- A associação dimensão-conector é uma heurística por proximidade.
-- Linhas e ramificações ainda não são reconhecidas.
-- A biblioteca PDF.js é carregada pelo cdnjs. Se o domínio for bloqueado, a análise não funcionará.
-- Todo resultado deve passar por conferência técnica antes de fabricação.
+## Segurança e validação
+O algoritmo preserva o comprimento total, mas a geometria deve ser conferida antes de fabricação. Esta POC não substitui aprovação técnica.
